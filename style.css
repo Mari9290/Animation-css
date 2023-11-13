@@ -19,11 +19,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: move 4s 1 linear;
+    animation: anim-box 4s 1 linear;
     animation-fill-mode: forwards;
 }
 
-@keyframes move {
+@keyframes anim-box {
     0% {
         width: 0%;
         
@@ -34,6 +34,10 @@
 }
 
 /* второй элемент */
+
+.rectangle {
+    margin-bottom: 100px;
+}
 
 .box-wrapper {
     width: 1000px;
@@ -48,16 +52,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: anim-one 4s infinite linear;
-}
-
-.box-wrapper:hover {
+    animation: anim-box1 4s infinite linear;
     animation-play-state: paused;
 }
 
-@keyframes anim-one {
+.box-wrapper:hover {
+    animation-play-state: running;
+}
+
+@keyframes anim-box1 {
     0% {
-        width: 0%;
+        width: 20%;
     }
 
     50% {
@@ -70,4 +75,56 @@
 }
 
 /* третий контейнер */
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blueviolet;
+    position: relative;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: anim-circle 3s infinite ease-in;
+}
+
+@keyframes anim-circle {
+    0% {
+
+    }
+
+    60% {
+        transform: translate(50px, 180px);
+    }
+
+    65% {
+        transform: translate(75px, 150px);
+    }
+
+    70% {
+        transform: translate(95px, 180px);
+    }
+
+    75% {
+        transform: translate(105px, 170px);
+    }
+
+    80% {
+        transform: translate(120px, 180px);
+    }
+
+    95%{
+        transform: translate(145px, 175px);
+    }
+
+    100% {
+        transform: translate(150px, 180px);
+    }
+}
 
